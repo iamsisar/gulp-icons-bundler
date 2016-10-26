@@ -53,7 +53,7 @@ for (let key in config.colors) {
         let taskName = 'colorizeSvg' + '_' + key;
         colorizeTasks.push(taskName);
         gulp.task(taskName, function() {
-            return colorizeSvg('source/**/*.svg', config.colors[key], key)
+            return colorizeSvg('assets/**/*.svg', config.colors[key], key)
             .pipe(rename(function(path) {
                 path.basename = fileNameFilter(path.basename) + "-" + key;
             }))
@@ -104,7 +104,7 @@ function consolidateFontTemplate(src, dest, basename, glyphs){
 
 
 gulp.task('Iconfont', function(done) {
-    var iconStream = gulp.src(['source/*.svg'])
+    var iconStream = gulp.src(['assets/*.svg'])
         .pipe(iconfont({
             fontName: config.font.name
         }));
@@ -137,7 +137,7 @@ gulp.task('zip', () => {
         '!*.zip'
         ])
         .pipe(zip(config.font.name + '-' + pkg.version + '.zip'))
-        .pipe(gulp.dest('.'));
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build',

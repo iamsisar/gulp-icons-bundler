@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "my-icon-font";
+  src: url('../fonts/my-icon-font.eot?v=0.0.1');
+  src: url('../fonts/my-icon-font.eot?#iefix?v=0.0.1') format('eot'),
+    url('../fonts/my-icon-font.woff2?v=0.0.1') format('woff2'),
+    url('../fonts/my-icon-font.woff?v=0.0.1') format('woff'),
+    url('../fonts/my-icon-font.ttf?v=0.0.1') format('truetype'),
+    url('../fonts/my-icon-font.svg#my-icon-font?v=0.0.1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.my-icon:before {
+  display: inline-block;
+  font-family: "my-icon-font";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.my-icon-2x { font-size: 2em; }
+.my-icon-3x { font-size: 3em; }
+.my-icon-4x { font-size: 4em; }
+.my-icon-5x { font-size: 5em; }
+
+.my-icon-thunder:before { content: "\EA01" }
+.my-icon-flame:before { content: "\EA02" }
+.my-icon-hamburger:before { content: "\EA03" }

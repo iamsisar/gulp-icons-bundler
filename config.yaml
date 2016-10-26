@@ -7,5 +7,5 @@
     '@2x': 44
     '@3x': 66
   font:
-    name: edison-iconfont
-    classname: edicon
+    name: my-icon-font
+    classname: my-icon

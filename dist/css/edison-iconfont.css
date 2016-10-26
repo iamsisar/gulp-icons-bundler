@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "edison-iconfont";
+  src: url('../fonts/edison-iconfont.eot?v=0.0.1');
+  src: url('../fonts/edison-iconfont.eot?#iefix?v=0.0.1') format('eot'),
+    url('../fonts/edison-iconfont.woff2?v=0.0.1') format('woff2'),
+    url('../fonts/edison-iconfont.woff?v=0.0.1') format('woff'),
+    url('../fonts/edison-iconfont.ttf?v=0.0.1') format('truetype'),
+    url('../fonts/edison-iconfont.svg#edison-iconfont?v=0.0.1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.edicon:before {
+  display: inline-block;
+  font-family: "edison-iconfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.edicon-2x { font-size: 2em; }
+.edicon-3x { font-size: 3em; }
+.edicon-4x { font-size: 4em; }
+.edicon-5x { font-size: 5em; }
+
+.edicon-thunder:before { content: "\EA01" }
+.edicon-flame:before { content: "\EA02" }
+.edicon-hamburger:before { content: "\EA03" }
