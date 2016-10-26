@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><%= fontName %> Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="../css/<%= fontName %>.css?v=<%= version %>"></head>
+<body>
+    <div class="bgc1 clearfix">
+        <h1 class="mhmm mvm">Font Name: <%= fontName %><br><small>(Glyphs:&nbsp;<%= _.size(glyphs) %>)</small></h1>
+        <p class="mhmm mvm"><strong><a href="../../<%= fontName %>-<%= version %>.zip">Download</a></strong></p>
+    </div>
+    <div class="clearfix mhl ptl">
+
+<% _.each(glyphs, function(glyph) { %>
+
+        <div class="glyph fs1">
+            <div class="clearfix bshadow0 pbs">
+                <span class="<%= className %> <%= className %>-<%= glyphNameFilter(glyph) %>"></span>
+                <span class="mls">.<%= className %>-<%= glyphNameFilter(glyph) %></span>
+            </div>
+            <fieldset class="fs0 size1of1 clearfix hidden-false">
+                <input type="text" readonly value="<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" class="unit size1of2" />
+                <input type="text" maxlength="1" readonly value="&#x<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>;" class="unitRight size1of2 talign-right" />
+            </fieldset>
+        </div>
+
+<% }); %>
+    </div>
+
+</body>
+</html>

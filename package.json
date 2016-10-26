@@ -1,0 +1,30 @@
+{
+  "name": "gulp-icons-bundler",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Cesare Cocito (iamsisar)",
+    "email": "cesarecocito@gmail.com.com",
+    "web": "https://github.com/iamsisar"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-edit-xml": "^2.0.0",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-newer": "^1.2.0",
+    "gulp-recolor-svg": "^1.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-svg2png": "^2.0.0",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-zip": "^3.2.0",
+    "image-size": "^0.5.0",
+    "svg2png": "^3.0.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,11 @@
+---
+  colors:
+    light: "#ffffff"
+    dark: "#484848"
+  sizes:
+    '@1x': 22
+    '@2x': 44
+    '@3x': 66
+  font:
+    name: edison-iconfont
+    classname: edicon
