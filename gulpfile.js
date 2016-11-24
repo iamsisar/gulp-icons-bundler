@@ -75,7 +75,8 @@ for (const key in config.colors) {
         gulp.task(taskName, () => {
             return colorizeSvg('assets/**/*.svg', config.colors[key], key).pipe(rename((path) => {
                 path.basename = fileNameFilter(path.basename) + "-" + key;
-            })).pipe(gulp.dest('dist/svg'));
+            }))
+            .pipe(gulp.dest('dist/svg'));
         });
         // add the task to the list
         colorizeTasksList.push(taskName);
@@ -95,9 +96,12 @@ const rasterizeSvg = (src, scale, name) => {
     return gulp.src(src).pipe(newer({
         dest: 'dist/png',
         map: (srcPath) => fileNameFilter(path.basename(srcPath, path.extname(srcPath))) + '--' + name + '.png'
-    })).pipe(svg2png(scale, true, 5)).pipe(rename((destPath) => {
+    }))
+    .pipe(svg2png(scale))
+    .pipe(rename((destPath) => {
         destPath.basename = fileNameFilter(destPath.basename) + '--' + name;
-    })).pipe(gulp.dest('dist/png'));
+    }))
+    .pipe(gulp.dest('dist/png'));
 }
 
 
